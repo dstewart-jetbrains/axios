@@ -58,8 +58,8 @@ module.exports = function(grunt) {
 
     karma: {
       options: {
-        configFile: 'karma.conf.js'
-        reports: 'teamcity'
+        configFile: 'karma.conf.js',
+        reporters: 'teamcity'
       },
       single: {
         singleRun: true

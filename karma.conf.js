@@ -154,7 +154,7 @@ module.exports = function(config) {
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
     // Disable code coverage, as it's breaking CI:
     // reporters: ['dots', 'coverage', 'saucelabs'],
-    reporters: ['dots', 'saucelabs'],
+    reporters: ['dots', 'saucelabs', 'teamcity'],
 
 
     // web server port

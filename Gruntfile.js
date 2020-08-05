@@ -6,14 +6,7 @@ module.exports = function(grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
   teamcity: {
-    options: {
-      suppressGruntLog: true,
-      status: {
-        warning: 'WARNING',
-        failure: 'FAILURE',
-        error: 'ERROR'
-      }
-    }
+    all: {} // need a task even if its an empty one
   },
     meta: {
       banner: '/* <%= pkg.name %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> by Matt Zabriskie */\n'

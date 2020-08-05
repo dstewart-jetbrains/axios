@@ -4,6 +4,12 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-teamcity');
   
   grunt.initConfig({
+    teamcity: {
+    options: {
+      // Task-specific options go here.
+    },
+    all: {}
+  }
     pkg: grunt.file.readJSON('package.json'),
     meta: {
       banner: '/* <%= pkg.name %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> by Matt Zabriskie */\n'

@@ -5,7 +5,16 @@ module.exports = function(grunt) {
   
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-  
+  teamcity: {
+    options: {
+      suppressGruntLog: true,
+      status: {
+        warning: 'WARNING',
+        failure: 'FAILURE',
+        error: 'ERROR'
+      }
+    }
+  },
     meta: {
       banner: '/* <%= pkg.name %> v<%= pkg.version %> | (c) <%= grunt.template.today("yyyy") %> by Matt Zabriskie */\n'
     },
@@ -88,17 +97,7 @@ module.exports = function(grunt) {
       }
     },
 
-    webpack: require('./webpack.config.js'),
-teamcity: {
-    options: {
-      suppressGruntLog: true,
-      status: {
-        warning: 'WARNING',
-        failure: 'FAILURE',
-        error: 'ERROR'
-      }
-    }
-  },
+    webpack: require('./webpack.config.js')
   });
 
   grunt.registerMultiTask('package2bower', 'Sync package.json to bower.json', function () {

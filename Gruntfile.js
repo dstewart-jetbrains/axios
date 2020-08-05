@@ -1,6 +1,8 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
 
+  grunt.loadNpmTasks('grunt-teamcity');
+  
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
     meta: {

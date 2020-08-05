@@ -1,7 +1,5 @@
 module.exports = function(grunt) {
   require('load-grunt-tasks')(grunt);
-
-  grunt.loadNpmTasks('grunt-teamcity');
   
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
@@ -92,7 +90,8 @@ module.exports = function(grunt) {
 
     webpack: require('./webpack.config.js')
   });
-
+  
+  grunt.loadNpmTasks('grunt-teamcity');
   grunt.registerMultiTask('package2bower', 'Sync package.json to bower.json', function () {
     var npm = grunt.file.readJSON('package.json');
     var bower = grunt.file.readJSON('bower.json');

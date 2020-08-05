@@ -73,7 +73,7 @@ module.exports = function(grunt) {
         src: ['test/unit/**/*.js']
       },
       options: {
-        reporter: 'mocha-teamcity-reporter'
+        reporter: 'mocha-teamcity-reporter',
         timeout: 30000,
       },
     },
